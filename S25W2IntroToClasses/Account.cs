@@ -28,6 +28,9 @@ namespace S25W2IntroToClasses
 
 		public void Withdraw(double amount)
 		{
+			if (amount > Balance)
+				throw new Exception("Insufficient funds. Transaction cancelled.");
+
 			Balance -= amount;
 		}
 	}
