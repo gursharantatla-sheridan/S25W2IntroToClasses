@@ -9,7 +9,7 @@ namespace S25W2IntroToClasses
     public class Product
     {
         // fields
-        private int id;
+        int id;
         private string _name;
         private double _price;
 
@@ -26,6 +26,15 @@ namespace S25W2IntroToClasses
             this.id = id;
             _name = name;
             _price = price;
+        }
+
+        // properties
+        public int Id
+        {
+            //get { return id; }
+            //set { id = value; }
+            get => id;
+            set => id = value;
         }
     }
 }
