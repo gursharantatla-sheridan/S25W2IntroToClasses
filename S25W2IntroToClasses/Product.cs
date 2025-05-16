@@ -13,6 +13,17 @@ namespace S25W2IntroToClasses
         private string _name;
         private double _price;
 
+        //private int _quantity;
+
+        //public int Quantity
+        //{
+        //    get { return _quantity; }
+        //    set { _quantity = value; }
+        //}
+
+        // auto-implemented property
+        public int Quantity { get; set; }
+
         // constructors
         public Product()
         {
@@ -31,10 +42,15 @@ namespace S25W2IntroToClasses
         // properties
         public int Id
         {
-            //get { return id; }
-            //set { id = value; }
-            get => id;
-            set => id = value;
+            get { return id; }
+            set 
+            { 
+                if (value >= 0)
+                    id = value;
+            }
+
+            //get => id;
+            //set => id = value;
         }
     }
 }
